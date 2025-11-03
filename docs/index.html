@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeAnvil - Fine-tune AI models on your codebase</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .hero {
+            text-align: center;
+            color: white;
+            padding: 60px 20px;
+        }
+        
+        .hero h1 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .hero .subtitle {
+            font-size: 1.5em;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+        
+        .content {
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            margin-top: 30px;
+        }
+        
+        .install-box {
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+        }
+        
+        .install-box code {
+            color: #667eea;
+            font-weight: bold;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .feature {
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+        
+        .feature h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            margin: 10px;
+            transition: background 0.3s;
+        }
+        
+        .cta-button:hover {
+            background: #764ba2;
+        }
+        
+        .github-link {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .github-link:hover {
+            text-decoration: underline;
+        }
+        
+        footer {
+            text-align: center;
+            color: white;
+            padding: 40px 20px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hero">
+            <h1>🔨 CodeAnvil</h1>
+            <p class="subtitle">Fine-tune AI models on your codebase</p>
+            <p>Transform DeepSeek Coder, Qwen, or any code LLM into an expert on YOUR code</p>
+        </div>
+        
+        <div class="content">
+            <h2>Quick Start</h2>
+            
+            <div class="install-box">
+                <code>wget https://codeanvil.net/codeanvil.sh</code><br>
+                <code>chmod +x codeanvil.sh</code><br>
+                <code>./codeanvil.sh setup</code>
+            </div>
+            
+            <h3>What is CodeAnvil?</h3>
+            <p>CodeAnvil automates the process of fine-tuning large language models on your specific codebase. 
+               The result is an AI assistant that deeply understands your project's architecture, coding patterns, 
+               and domain-specific knowledge.</p>
+            
+            <div class="features">
+                <div class="feature">
+                    <h3>✅ One-Command Setup</h3>
+                    <p>Automated installation of all dependencies including PyTorch, LLaMA Factory, and Ollama</p>
+                </div>
+                
+                <div class="feature">
+                    <h3>🎯 Smart Training</h3>
+                    <p>Comprehensive data extraction learns build systems, classes, and architecture</p>
+                </div>
+                
+                <div class="feature">
+                    <h3>📊 Real-Time Monitoring</h3>
+                    <p>Watch training progress with live metrics and beautiful progress bars</p>
+                </div>
+                
+                <div class="feature">
+                    <h3>🚀 Easy Export</h3>
+                    <p>One command exports your model to Ollama for immediate use</p>
+                </div>
+            </div>
+            
+            <h3>Basic Usage</h3>
+            <div class="install-box">
+                <code># Train on your codebase</code><br>
+                <code>codeanvil train /path/to/myproject</code><br>
+                <br>
+                <code># Monitor training</code><br>
+                <code>codeanvil monitor</code><br>
+                <br>
+                <code># Export and use</code><br>
+                <code>codeanvil export deepseek-coder</code><br>
+                <code>ollama run codeanvil-deepseek_coder:v1.0</code>
+            </div>
+            
+            <h3>Requirements</h3>
+            <ul>
+                <li><strong>OS:</strong> Rocky Linux, Arch Linux, or similar</li>
+                <li><strong>GPU:</strong> NVIDIA GPU with 16GB+ VRAM (RTX 4080 recommended)</li>
+                <li><strong>RAM:</strong> 16GB minimum, 32GB+ recommended</li>
+                <li><strong>Disk:</strong> 100GB free space</li>
+                <li><strong>CUDA:</strong> 12.1 or later</li>
+            </ul>
+            
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="https://github.com/mdmattsson/codeanvil" class="cta-button">View on GitHub</a>
+                <a href="https://github.com/mdmattsson/codeanvil#documentation" class="cta-button">Documentation</a>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>
+            <a href="https://github.com/mdmattsson/codeanvil" class="github-link" style="color: white;">
+                GitHub Repository
+            </a>
+            | MIT License | Built with ❤️
+        </p>
+    </footer>
+</body>
+</html>
